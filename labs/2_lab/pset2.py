@@ -47,12 +47,4 @@ def round_to_hundredths(x):
 	Hun = Num // 10
 	Num = Num - Hun * 10
 	Rounder = Num // 5
-	print(((Wh_Num * 100) + (Ten * 10) + ((Hun + Rounder) * 1)) / 100)
-	print(' ')
 	return ((Wh_Num * 100) + (Ten * 10) + ((Hun + Rounder) * 1)) / 100
-
-
-
-
-
-

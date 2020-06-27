@@ -6,7 +6,11 @@
 
 
 def all_input():
-	x = 'a'
+    """Repeatedly prompt the user for input until no characters
+    are entered for a particular iteration. Return the concatenation
+    of all characters entered. Strings can be concatenated using the + operator.
+    You may want to use the built-in len function in the condition of the while loop. """
+    x = 'a'
 	y = ''
 	while len(x) != 0:
 		x = input('type some characters: ')
@@ -62,7 +66,7 @@ def is_prime(x):
 	while n < x and b == True:
 		a  = x / n
 		n += 1
-		if a % 1 == 0 or x == 2: # or x == 1:
+		if a % 1 == 0 or x == 2: 
 			b = False
 	if x == 1:
 		b = False
@@ -86,14 +90,6 @@ def sum_mul_table(x):
 		total = total + sum_ints(n, x * n, n) + x * n
 		n += 1 
 	return total
-
-
-#def rotate_string(word, n):
-#	m = 1
-#	while m <= n:
-#		word = word[-1] + word[:-1] 	
-#		m += 1 
-#	return word
 
 
 def rotate_string(w,n):

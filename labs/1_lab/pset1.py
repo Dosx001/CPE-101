@@ -6,16 +6,22 @@
 
 
 def problem_1() -> None:
+    """Request a number from 1 to 20. Double it, add 10,
+    divide by 2, and then subtract the original number."""
 	Num = input('Pick a number between 1 and 20: ')
 	x = int(Num) * int(2)
 	x = int(x) + int(10)
 	x = int(x) / int(2)
 	x = int(x) - int(Num)
 	print(x)
-	#Result = (int(Num)*int(2)+int(10))/int(2)-int(Num)
-	#print(Result)	
 
 def problem_2() -> None:
+    """Request any two numbers, storing each in a variable.
+    Add those numbers and store this sum in a third variable.
+    Add the second input number and the previous sum and store
+    this new sum in a fourth variable. Continue this process of
+    adding the most recent two variables until you have 10 variables total,
+    including the initial two. Now add up the 10 variables and divide by the number in the 7th variable."""
 	Num = input('Pick a number: ')
 	Num2 = input('Pick a second number: ')
 	Num3 = int(Num) + int(Num2)
@@ -33,7 +39,12 @@ def problem_2() -> None:
 
 
 def problem_3() -> None:
-	num = input('Pick a four-digit number where each digit is different: ')
+    """Request one four-digit number, such that each digit is different.
+    Without requesting another number, create a new number with the first and last digits
+    of the previous number swapped. Subtract the smaller number from the larger and
+    add together the digits of the resulting number, then add this new number's two digits
+    together (if the sum is only one digit, zero can be added)."""
+    num = input('Pick a four-digit number where each digit is different: ')
 	x = int(num)
 	Ths = x // int(1000)
 	x = x - Ths * int(1000)
@@ -42,11 +53,7 @@ def problem_3() -> None:
 	Ten = x // int(10)
 	One = x - Ten * int(10)
 	New = One * int(1000) + Hun * int(100) + Ten * int(10) + Ths
-	print(x)
-	print(New)
 	Sub = max(int(num), New) - min(int(num), New)
-	print(Sub) 
-	Ths = Sub // int(1000)
 	Sub = Sub - Ths * int(1000)
 	Hun = Sub // int(100)
 	Sub = Sub - Hun * int(100)
@@ -56,15 +63,12 @@ def problem_3() -> None:
 	Fst = Final // int(10)
 	Sec = Final - Fst * int(10)
 	Done = Fst + Sec
-	print(Ths)
-	print(Hun)
-	print(Ten)
-	print(Sub)
-	print(Final)
 	print(Done)
 
 
 def problem_4() -> None:
+    """Request a number from 1 to 50 that is not divisible by 7 and then divide it by 7.
+    Now add up the first six digits after the decimal point. """
 	num = input('Pick a number between 1 and 50, not divisible by 7: ')
 	x = int(num) / int(7)	
 	print(x)
